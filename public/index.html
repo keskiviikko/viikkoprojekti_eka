@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Study Journal</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"
+        integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+</head>
+
+<body id="body" class="light-mode">
+    <header>
+        <button type="button" onclick="backgroundColor()">Light/Dark</button>
+    </header>
+    <div class="container">
+        <div class="section">
+            <form id="postTopics">
+                <fieldset>
+                    <legend>
+                        <h2>POST TOPIC</h2>
+                    </legend>
+                    Title:<br>
+                    <input type="text" name="title" id="title" required>
+                    <br>
+                    Tag:<br>
+                    <input type="text" name="tag" id="tag" required>
+                    <br>
+                    Notes:<br>
+                    <textarea rows="7" cols="30" name="notes" id="notes"></textarea>
+                    <br>
+                    Source, materials:<br>
+                    <input type="text" name="src" id="src" required>
+                    <br>
+                    Time To Master:<br>
+                    <input type="number" name="timeToMaster" id="timeToMaster" required>
+                    <br>
+                    Weeks Studied: <span id="rangeVal"></span><br>
+                    <input type="range" name="weeks" id="weeksStudied" min="0" max="12" value="0" step="1" required>
+                    <br>
+                    Start Date:<br>
+                    <input type="date" name="startD" id="startD" required>
+                    <br>
+                    Progress:<br>
+                    <input type="radio" name="inProgress" value="true" id="unfinished" checked><label
+                        for="unfinished">Unfinished</label>
+                    <input type="radio" name="inProgress" value="false" id="finished"><label
+                        for="finished">Finished</label>
+                    <br>
+                    Completion Date:<br>
+                    <input type="date" name="complD" id="complD">
+                    <br><br>
+                    <input type="submit" value="Submit" id="postBtn">
+                </fieldset>
+            </form>
+        </div>
+        <div class="section">
+            <form id="getTopics">
+                <fieldset>
+                    <legend>
+                        <h2>TOPICS</h2>
+                    </legend>
+                    <ol id="topicsOutput"></ol><br>
+                    <h3>DELETE TOPIC</h3>
+                    Topic ID:<br>
+                    <input type="number" name="delete" id="delId" required>
+                    <input type="submit" value="Delete" id="delBtn"><br><br>
+                    <a id="dbLink" href="http://localhost:3000/api/topics">Topic database</a>
+                </fieldset>
+            </form>
+        </div>
+        <div class="section">
+            <form id="getTasks">
+                <fieldset>
+                    <legend>
+                        <h2>TASKS</h2>
+                    </legend>
+                    <ol id="tasksOutput"></ol>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

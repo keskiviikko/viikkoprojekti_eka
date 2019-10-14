@@ -1,0 +1,39 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /*fraction*/
+  }
+  
+.section {
+    margin: 0px 30px;
+}
+  
+a {
+    text-decoration: none;
+    color:rgb(27, 149, 224);
+}
+
+a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#dbLink {
+    font-size: 18px;
+    padding: 5px;
+}
+
+body.dark-mode {
+  background-color: #243447;
+  color: white;
+}
+
+body.light-mode {
+  background-color: whitesmoke;
+  color: #333333;
+}
+
+@media (max-width: 1024px) { /*breakpoint*/
+    .container {
+      grid-template-columns: none;
+    }
+}
