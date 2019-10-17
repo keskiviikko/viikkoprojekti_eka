@@ -22,14 +22,9 @@ a:hover {
     padding: 5px;
 }
 
-body.dark-mode {
+body {
   background-color: #243447;
   color: white;
-}
-
-body.light-mode {
-  background-color: whitesmoke;
-  color: #333333;
 }
 
 @media (max-width: 1024px) { /*breakpoint*/
